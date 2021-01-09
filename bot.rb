@@ -1,6 +1,5 @@
 require 'telegram_bot'
-$token = open("/.auth_token").read()
-token = ''
+token = open(".auth_token").read()
 bot = TelegramBot.new(token: token)
 
 bot.get_updates(fail_silently: true) do |message|
